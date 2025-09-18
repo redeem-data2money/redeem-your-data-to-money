@@ -1,0 +1,40 @@
+:root{
+  --accent:#0a74da;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --success:#16a34a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#111;background:var(--bg)}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.site-header{background:linear-gradient(90deg,var(--accent),#1e90ff);color:#fff;padding:18px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand h1{font-size:18px;margin:0}
+.tagline{margin:6px 0 0;font-size:13px;opacity:.95}
+.controls{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0}
+.search input{padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;min-width:220px}
+.custom{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.custom h3{margin:0 0 8px;font-size:15px}
+.custom-row{display:flex;gap:8px;align-items:center}
+.custom-row input, .custom-row select{padding:8px;border-radius:6px;border:1px solid #e6e9ef}
+.custom-row button{padding:9px 12px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.calc-result{margin-top:10px;font-weight:600}
+.table-wrap{overflow:auto;background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 8px;text-align:left;border-bottom:1px solid #f0f2f5}
+th{background:#fafbff;font-weight:600}
+.action-btn{padding:8px 10px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.note{color:var(--muted);font-size:13px}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);z-index:40}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:var(--card);padding:18px;border-radius:10px;max-width:420px;width:95%;box-shadow:0 6px 24px rgba(2,6,23,0.2)}
+.modal-content h3{margin-top:0}
+.close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:22px;cursor:pointer}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.modal-actions .secondary{background:#f3f4f6;color:#111;padding:8px 12px;border-radius:6px;border:0}
+.site-footer{padding:14px 0;color:var(--muted);text-align:center;margin-top:20px}
+@media (max-width:640px){
+  .controls{flex-direction:column}
+  th,td{font-size:14px}
+}
